@@ -1,0 +1,7 @@
+----------------------------------- PARAMETROS GERAIS ----------------------------------------------
+ 
+Email=pedro.vinicius1304@gmail.com;
+ 
+Senha=teste@01;
+---------------------------------------- TEXTOS GERAIS ------------------------------------------------------------ 
+Isto é um comentario teste;Outro comentario teste; inclui mais um; ok , funcionou normal agora;
