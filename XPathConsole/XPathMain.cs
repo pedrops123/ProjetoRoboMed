@@ -68,7 +68,14 @@ namespace XpathConsole
                 IWebElement buttonPerfil = driver.FindElement(By.XPath("//a[@title='Perfil']"));
                 buttonPerfil.Click();
 
-                Thread.Sleep(new TimeSpan(0, 0, 5));
+                IWebElement bodyElement = driver.FindElement(By.TagName("body"));
+
+                for (int i=1;i <=10; i++)
+                {
+                    bodyElement.SendKeys(Keys.ArrowDown);
+                }
+                
+               Thread.Sleep(new TimeSpan(0, 0, 5));
                 IWebElement buttonComment = driver.FindElement(By.XPath("//a[@label='Publicação']"));
                 buttonComment.Click();
                 // Campo pesquisa 
