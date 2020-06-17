@@ -57,13 +57,9 @@ namespace XpathConsole
 
 
                 email.Click();
-                //email.SendKeys("pedro.furlan1304@hotmail.com");
                 email.SendKeys(dados.email);
-                //email.SendKeys("pedro.vinicius1304@gmail.com");
                 pass.Click();
-                //pass.SendKeys("pedro72473541");
                 pass.SendKeys(dados.senha);
-                //pass.SendKeys("teste@01");
                 form.Submit();
 
                 Thread.Sleep(new TimeSpan(0, 0, 10));
