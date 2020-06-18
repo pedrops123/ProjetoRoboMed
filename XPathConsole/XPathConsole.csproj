@@ -61,6 +61,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandsBot.cs" />
+    <Compile Include="ParametrosDocumento.cs" />
+    <Compile Include="PrepareDriver.cs" />
     <Compile Include="XPathMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
