@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,16 +15,20 @@ namespace XPathConsole
         public ParametrosDocumento()
         {
             string nomeArquivo = "ParametroGerais.txt";
-            string diretorioRaiz = Directory.GetCurrentDirectory();
+            // Mudança de get Directory.getcurrentDirectory() para assembly location - 19/06/2020
+            string diretorioRaiz = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             pathCompleto = Path.Combine(diretorioRaiz, nomeArquivo);
         }
 
         public DataParametros criaVerificaDoc()
         {
+            Console.WriteLine("Rodando app no diretorio \n " + pathCompleto);
+
             DataParametros dados = new DataParametros();
             if (!File.Exists(pathCompleto))
             {
                 File.Create(pathCompleto).Dispose();
+               
 
                 Console.WriteLine("Arquivo de parametro criado !");
                 Console.WriteLine("Digite o E-mail a ser incluido automático !");
